@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <meta charset="utf-8" />
+    <title>Meta Tiger</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <meta name="keywords" content="personal account login, rapidobusd, rapidobusd matrix, smart contract">
+    <meta name="description" content="Participant authorization for access to all functions of the personal account.">
+    <script src="../Content/Front/vendors/themes/default/scripts/libs.mina208a208.js?v=1610046753"></script>
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.mina4f0a4f0.html?v=0" />
+    <link rel="stylesheet" href="../Content/Front/vendors/themes/default/styles/css/stylec4efc4ef.css?v=1614588984" />
+    <link rel="stylesheet" href="../Content/Front/vendors/themes/default/styles/css/responsive76247624.css?v=1613221064" />
+    <link rel="stylesheet" href="../Content/Front/vendors/css/commone04de04d.css?v=1614799521" />
+    <link rel="stylesheet" href="../Content/Front/vendors/css/auth76247624.css?v=1613221064" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../Content/Front/img/USDC.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Content/Front/img/USDC.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Content/Front/img/USDC.png">
+    <!-- <link rel="manifest" href="https://Busd.rapidobusd.io/img/favicon/site.webmanifest?v=1.1"> -->
+    <link rel="shortcut icon" href="../Content/Front/img/USDC.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+
+
+
+    <meta name="apple-mobile-web-app-title" content="rapidobusd Busd">
+    <meta name="application-name" content="rapidobusd Busd">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml?v=1.1">
+    <meta name="theme-color" content="#ffffff">
+    <!--[if lt IE 9]>
+            <script>
+                document.createElement("header");
+                document.createElement("nav");
+                document.createElement("main");
+                document.createElement("section");
+                document.createElement("article");
+                document.createElement("aside");
+                document.createElement("footer");
+            </script>
+        <![endif]-->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'vendors/www.googletagmanager.com/gtm54455445.html?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NCC7F83');
+    </script>
+
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "../Content/Front/vendors/cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.html", "ym");
+
+        ym(57866482, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            ecommerce: "dataLayer"
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/57866482" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <style>
+    
+.header-lang {
+    position: relative;
+    cursor: pointer;
+    max-height: 47px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@media(max-width: 560px) {
+    .header-lang {
+        /* margin-top: 54px; */
+        width: 125px;
+    }
+    .isWraningHide .header-lang {
+        margin-top: 10px;
+    }
+}
+
+.header-lang::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 15px;
+    height: 11px;
+    pointer-events: none;
+    background: url("../images/arrow_icon.html") no-repeat center;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.header-lang.opened {
+    overflow: visible;
+    border-radius: 24px;
+}
+
+.header-lang.opened::after {
+    -webkit-transform: rotate(180deg) translateY(50%);
+    transform: rotate(180deg) translateY(50%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.header-lang.opened .header-lang__option {
+    border-radius: 0;
+}
+
+.header-lang.opened .header-lang__option.current {
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
+
+.header-lang__option {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    background-color: #15091b;
+    border-radius: 24px;
+    padding: 10px;
+    min-height: 47px;
+}
+
+.header-lang__option.current {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+}
+
+.header-lang__option-flag {
+    min-width: 27px;
+    min-height: 27px;
+    max-width: 27px;
+    max-height: 27px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 8px;
+}
+
+.header-lang__option-flag img {
+    width: 100%;
+    height: 100%;
+}
+
+.header-lang__option-name {
+    font-size: 12px;
+    font-family: "Neuron Angled", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-right: 5px;
+}
+
+a.header-lang__option-name {
+    color: white;
+}
+
+    </style>
+</head>
+
+<body>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCC7F83" height="0" width="0"
+                style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+    <div class="main-wrap auth">
+        <div class="case">
+            <div class="auth__alerts alerts" id="alerts"></div>
+            <div class="auth__data row i-mid">
+                <a class="auth__logo logo" href="../index.html"><img src="../Content/Front/img/meta-tiger.png" alt="" /></a>
+            </div>
+            <!-- <div class="header-lang">
+                <div class="header-lang__option">
+                    <div class="header-lang__option-flag">
+                        <img src="/Content/Front/img/flags/ru.svg" alt="ru">
+                    </div>
+                    <a href="#" data-lang="Russian" class="translation-links header-lang__option-name">
+                        РУССКИЙ
+                    </a>
+                </div>
+                <div class="header-lang__option current ">
+                    <div class="header-lang__option-flag">
+                        <img src="/Content/Front/img/flags/en.svg" alt="en">
+                    </div>
+                    <a href="#" data-lang="English" class="translation-links header-lang__option-name">
+                        ENGLISH
+                    </a>
+                </div>
+                <div class="header-lang__option ">
+                    <div class="header-lang__option-flag">
+                        <img src="/Content/Front/img/flags/de.svg" alt="de">
+                    </div>
+                    <a href="#" data-lang="German" class="translation-links header-lang__option-name">
+                        GERMAN
+                    </a>
+                </div>
+                <div class="header-lang__option ">
+                    <div class="header-lang__option-flag">
+                        <img src="/Content/Front/img/flags/es.svg" alt="es">
+                    </div>
+                    <a href="#" data-lang="Spanish" class="translation-links header-lang__option-name">
+                        SPANISH
+                    </a>
+                </div>
+                <div class="header-lang__option ">
+                    <div class="header-lang__option-flag">
+                        <img src="/Content/Front/img/flags/fr.svg" alt="fr">
+                    </div>
+                    <a href="#" data-lang="French" class="translation-links header-lang__option-name">
+                        FRENCH
+                    </a>
+                </div>
+                <div class="header-lang__option ">
+                    <div class="header-lang__option-flag">
+                        <img src="/Content/Front/img/flags/it.svg" alt="it">
+                    </div>
+                    <a href="#" data-lang="Italian" class="translation-links header-lang__option-name">
+                        ITALIAN
+                    </a>
+                </div>
+                <div class="header-lang__option ">
+                    <div class="header-lang__option-flag">
+                        <img src="/Content/Front/img/flags/az.svg" alt="az">
+                    </div>
+                    <a href="#" data-lang="Azerbaijani" class="translation-links header-lang__option-name">
+                        AZƏRBAYCAN
+                    </a>
+                </div>
+                <div class="header-lang__option ">
+                    <div class="header-lang__option-flag">
+                        <img src="/Content/Front/img/flags/ar.svg" alt="ar">
+                    </div>
+                    <a href="#" data-lang="Arabic" class="translation-links header-lang__option-name">
+                        العربية
+                    </a>
+                </div>
+                <div class="header-lang__option ">
+                    <div class="header-lang__option-flag">
+                        <img src="/Content/Front/img/flags/he.svg" alt="he">
+                    </div>
+                    <a href="#" data-lang="Hebrew" class="translation-links header-lang__option-name">
+                        עִבְרִית
+                    </a>
+                </div>
+            </div> -->
+            <div class="auth__blocks">
+                <div style="max-width: 750px; margin:0 auto;">
+                </div>
+                <div class="auth__block auth__block_main block">
+                    <div class="auth__body row">
+                        <div class="auth__col auth__col_border">
+                            <div class="auth__main-title title" style="font-size:15px;">Login to your personal account</div>
+                            <div class="auth__text" style="font-size:12px;">
+                                To access to all the functions of your personal account, use
+                                automatic login
+                            </div>
+
+                            
+
+                            <a id="HideAuth" onClick="login()"
+                               class="auth__btn btn btn_bg-violet btn_md btn_hover-bg-gray btn_radius auth-sign__btn disabled text-white" style="background: #0CC1FF;">
+                                Automatic Login <span class="auth-sign__btn-load"></span>
+                            </a>
+                            <a id="showbuttonAuth" style="display:none"
+                               class="auth__btn btn btn_bg-violet btn_md btn_hover-bg-gray btn_radius auth-sign__btn disabled">
+                                <i class="fa fa-refresh fa-spin"></i> Processsing
+                            </a>
+
+                        </div>
+                        <div class="auth__col">
+                            <div class="auth__title" style="font-size:17px;">
+                                To view your account <br> Specify ID OR Polygon Wallat
+                            </div>
+                            <form method="post" class="auth-form" >
+                                <div>
+                                    <input type="text" name="ethaddress_id" id="ethaddress_id" class="input__area"
+                                           required="" placeholder="ID or Polygon wallet" style="background-color: #333333; padding: 10px;
+margin-bottom: 10px;
+    margin-top: 15px; color:#eee"
+                                           autofocus />
+                                </div>
+                                <button id="Hide" type="button"
+                                        class="auth__show btn btn_md btn_hover-bg-gray btn_radius btn_padding" style="background: #8556EF;
+    border: 1px solid #8556EF; color:#eee"
+                                        onClick="loginwithID(document.getElementById('ethaddress_id').value)">
+                                    Viewing
+                                </button>
+
+                                <button id="showbutton" style="display:none" type="button"
+                                        class="auth__show btn btn_bg-violet-light btn_md btn_hover-bg-gray btn_radius btn_padding">
+                                    <i class="fa fa-refresh fa-spin"></i> Processsing
+                                </button>
+                            </form>
+                            
+                        </div>
+                    </div>
+                    <div class="auth__foot row">
+                        <div class="auth__col">
+                            <div class="auth__sub-title">Join if you are not with us</div>
+                            <div class="auth__link auth__link_yellow" style="font-size:15px;">
+                                <a href="Registration.html">
+                                    Registration in
+                                    meta-tiger.space
+                                </a>
+                            </div>
+                        </div>
+                        <div class="auth__col">
+                            <div class="auth__sub-title">Official chat Telegram:</div>
+                            <div class="auth__link auth__link_blue">
+                                <a href="https://t.me/metatigerofficial" style="color:#DF73B3;font-size:15px">@metatigerofficial</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script defer src="../Content/Front/vendors/js/auth/signa208a208.js?v=1610046753"></script>
+                <div class="popup popup_sm popup_light-violet" id="popup-tron">
+                    <div class="popup__wrap">
+                        <div class="popup__close cls-btn"><i class="icon icon-x"></i></div>
+                        <div class="popup__inner">
+                            <div class="popup__img"><img src="../Content/Front/images/lion-logo.png" alt="" /></div>
+                            <div class="popup__title">
+                                The  meta-tiger.space site requires a Polygon wallet to interact with the
+                                smart contract. Click on the button below to download the tronlink wallet.
+                            </div>
+                            <a class="popup__btn btn btn_bg-violet btn_md btn_radius btn_hover-bg-gray" href="#"
+                               target="_blank">
+                                Go tronlink.org
+                            </a>
+                        </div>
+                    </div>
+                    <div class="popup__bg cls-btn"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var config = {
+            site: {
+                domain: location.hostname,
+                protocol: location.protocol + '//',
+                hostname: location.hostname,
+                link: 'https://Busd.rapidobusd.io/',
+                course: {
+                    value: `Busd_USD`,
+                    symbol: `$`,
+                },
+            },
+            user: {
+                id: '',
+                refkey: '',
+                address: '',
+                referrerId: '',
+                isAuthSecure: false,
+                sid: 'e501e608a43937923f06d88e934b415e',
+            },
+            server: {
+                date: [2021, 06, 10, 10, 06, 22],
+            },
+            lang: {
+                /* contract.js */
+                buyLevel: `Confirm the purchase`,
+                notDetectedWallet: `Tron wallet Not found in your browser.`,
+                unblockWallet: `Unlock the wallet to confirm the action`,
+                notActiveWallet: `Tron wallet is not active`,
+                errorSendingTransaction: `Error sending transaction: `,
+                transactionSend: `The transaction has been sent! Please wait for confirmation of the network.`,
+                confirmTransaction: `Confirm the transaction in Tron wallet`,
+                errorReadSmartContract: `Read error SmartContract`,
+                uplineNotRegistered: `Your upline is not registered`,
+                userNotExists: `The user is not registered`,
+                confirmRegistration: `Registration is complete, you are being redirected to your account`,
+                authError: `Authorization error`,
+                appoint: `Appointed`,
+                confirm: `Are you sure?`,
+                isNotExistsConfig: `Error, variable &quot;config&quot; does not exist`,
+                isNotOwnerWallet: `The selected account does not belong to you, please change your active wallet`,
+                saveEdit: `Changes accepted`,
+                fillFildText: `Fill in the text box`,
+
+                /* common.js */
+                copied: `Copied`,
+
+                // Сокеты события
+                'ws-regLevel_0': `Joined ID:{user_id}`,
+                'ws-regLevel_1': `Joined ID:{user_id}. Congratulations on your successful choice!`,
+                'ws-regLevel_2': `Meet the new member ID is:{user_id}.`,
+                'ws-regLevel_3': `Checked ID:{user_id}. Welcome to rapidobusd!`,
+                'ws-newUserPlace': `ID:{user_id} earned {price_level} {crypto_name} (\${currency_usd}) in the {matrix}`,
+                'ws-upgrade': `ID:{user_id} bought {level} th site in {matrix} participant {ref_id}.`,
+                'ws-reinvest': `Have ID:{user_id} has been auto-reinvest on a {level}-th site ({matrix})`,
+                'ws-missedEthReceive': `ID:{user_id} missed profit {price_level} {crypto_name} (\${currency_usd}). You must perform the upgrade in ({matrix})`,
+                'ws-sentExtraEthDividends': `ID:{user_id} received a bonus {price_level} {crypto_name} (\${currency_usd})`,
+                'ws-cannotSendMoneyEvent': `ID:{user_id} error getting translation`,
+                'ws-leadingPartner': `ID:{user_id} missed profit {price_level} {crypto_name} (\${currency_usd}) from (ID:{u_id}) for area # {level} ({matrix})`,
+                'ws-leadingPartnerToUpline': `ID:{u_id} overtook its parent ID is:{user_id} in the matrix {matrix} with area # {level}`,
+                'ws-leadingPlacePurchase': `ID: {user_id} overtook his invitee (ID: {referrer_id}) at site # {level} ({matrix})`,
+
+                // Скрипт с выводом даты отсчета времени
+                'elt-years_0': `year`,
+                'elt-years_1': `year`,
+                'elt-years_2': `years`,
+                'elt-months_0': `a month`,
+                'elt-months_1': `months`,
+                'elt-months_2': `months`,
+                'elt-days_0': `day`,
+                'elt-days_1': `day`,
+                'elt-days_2': `days`,
+                'elt-hours_0': `hour`,
+                'elt-hours_1': `hours`,
+                'elt-hours_2': `hours`,
+                'elt-minutes_0': `min`,
+                'elt-minutes_1': `minutes`,
+                'elt-minutes_2': `minutes`,
+                'elt-minutes_3': `a minute`,
+                'elt-seconds_0': `second`,
+                'elt-seconds_1': `seconds`,
+                'elt-seconds_2': `seconds`,
+                'elt-seconds_3': `second`,
+                'elt-end': ` ago`,
+                'elt-freshly': `just`,
+                'elt-deadline': `time left`,
+                'elt-after': `through `,
+
+                'correlationActivated': `Key successfully activated`,
+            },
+            locked: {
+                buyLevel: ``,
+                authorization: ``,
+                registration: ``,
+            },
+            permissions: {
+                buyLevel: `0`,
+            },
+            isFramed: null,
+            isMobile: false,
+            haveWallet: window.tronWeb,
+            previousUrl: `/`,
+            course: {
+                Busd_USD: `0.07444`,
+                Busd_EUR: `0.06127`,
+                Busd_RUB: `5.358`,
+            }
+        };
+
+        // Получить основной домен
+        let arr = config.site.domain.split('.');
+        if (arr.length > 2) {
+            config.site.domain = arr.slice(arr.length - 2).join('.')
+        }
+
+        // Запущен ли сайт в теге iframe
+        try {
+            config.isFramed = window != window.top || document != top.document || self.location != top.location;
+        } catch (e) {
+            config.isFramed = true;
+        }
+
+        window.addEventListener('load', function () {
+            config.haveWallet = window.tronWeb;
+        });
+    </script>
+    <script src="../Scripts/common5b145b14.js?v=1610453867"></script>
+    <script src="../Scripts/commonb428b428.js?v=1614610415"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/web3@1.7.3/dist/web3.min.js"></script>
+    <script src="https://bscscan.com/assets/js/custom/web3-eth.min.js"></script>
+    <script src="https://meta-tiger.space/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="../node_modules/web3/dist/web3.min.js"></script>
+
+
+    <script>
+
+
+        $(document).ready(async function () {
+            console.log("ready!");
+
+
+            if (window.ethereum) {
+                console.log("mahi1");
+                window.web3 = new Web3(ethereum);
+                try {
+                    // Request account access if needed
+                    await ethereum.enable();
+                    console.log(web3);
+
+                    var networkid = await web3.eth.net.getId()
+                    console.log("networkid " + networkid);
+                    if (networkid != 137) {
+                        alert('Connect to Matic Mainnet Network');
+                        //initApp_token();
+                    }
+                    else {
+                        //coinrate();
+
+
+                    }
+
+
+                    // Acccounts now exposed
+                    web3.eth.sendTransaction({/* ... */ });
+                } catch (error) {
+                    // User denied account access...
+                }
+            }
+            // Legacy dapp browsers...
+            else if (window.web3) {
+                window.web3 = new Web3(web3.currentProvider);
+                // console.log(web3);
+
+                // Acccounts always exposed
+                web3.eth.sendTransaction({/* ... */ });
+            }
+            // Non-dapp browsers...
+            else {
+                console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+                alert('Requires ETH purse to interact smart contract You should consider trying MetaMask!');
+                //requiredMetamask();
+            }
+        });
+
+        // const stakingaddress = "0x7481B4B5cB85E11DC14DE5A3c397e629b5Fea9Fb";
+        const stakingaddress = "0x4775239d7282c2D45A0902f02FFA9d09866F7E39";
+        const StakingnmatrixAbi = [
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "internalType": "uint8",
+                        "name": "matrix",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "level",
+                        "type": "uint8"
+                    }
+                ],
+                "name": "buyNewLevel",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "userAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "matrix",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "level",
+                        "type": "uint8"
+                    }
+                ],
+                "name": "buyNewLevel_own",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "internalType": "uint8",
+                        "name": "matrix",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "level",
+                        "type": "uint8"
+                    }
+                ],
+                "name": "buyNewLevelAutoUpgrade",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "ownerAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "_token",
+                        "type": "address"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "constructor"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "receiver",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "from",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint8",
+                        "name": "matrix",
+                        "type": "uint8"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint8",
+                        "name": "level",
+                        "type": "uint8"
+                    }
+                ],
+                "name": "MissedEthReceive",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "user",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "referrer",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint8",
+                        "name": "matrix",
+                        "type": "uint8"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint8",
+                        "name": "level",
+                        "type": "uint8"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint8",
+                        "name": "place",
+                        "type": "uint8"
+                    }
+                ],
+                "name": "NewUserPlace",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "user",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "referrer",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": true,
+                        "internalType": "uint256",
+                        "name": "userId",
+                        "type": "uint256"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint256",
+                        "name": "referrerId",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "Registration",
+                "type": "event"
+            },
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "referrerAddress",
+                        "type": "address"
+                    }
+                ],
+                "name": "registrationExt",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "userAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "referrerAddress",
+                        "type": "address"
+                    }
+                ],
+                "name": "registrationExt_own",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "user",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "currentReferrer",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "caller",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint8",
+                        "name": "matrix",
+                        "type": "uint8"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint8",
+                        "name": "level",
+                        "type": "uint8"
+                    }
+                ],
+                "name": "Reinvest",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "from",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "receiver",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint8",
+                        "name": "matrix",
+                        "type": "uint8"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint8",
+                        "name": "level",
+                        "type": "uint8"
+                    }
+                ],
+                "name": "SentExtraEthDividends",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "from",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "receiver",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint8",
+                        "name": "matrix",
+                        "type": "uint8"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint8",
+                        "name": "level",
+                        "type": "uint8"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint256",
+                        "name": "levelPricee",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "SentIncomeDividends",
+                "type": "event"
+            },
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "_newOwner",
+                        "type": "address"
+                    }
+                ],
+                "name": "transferOwnership",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "internalType": "contract IERC20",
+                        "name": "token",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "values",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "updateX6LP",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "user",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "referrer",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint8",
+                        "name": "matrix",
+                        "type": "uint8"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint8",
+                        "name": "level",
+                        "type": "uint8"
+                    }
+                ],
+                "name": "Upgrade",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "previousOwner",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "newOwner",
+                        "type": "address"
+                    }
+                ],
+                "name": "onOwnershipTransferred",
+                "type": "event"
+            },
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "_token",
+                        "type": "address"
+                    }
+                ],
+                "name": "setTokenAddress",
+                "outputs": [
+                    {
+                        "internalType": "bool",
+                        "name": "",
+                        "type": "bool"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "payable": true,
+                "stateMutability": "payable",
+                "type": "fallback"
+            },
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "_senderads",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "_amttoken",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "mainadmin",
+                        "type": "address"
+                    }
+                ],
+                "name": "usersActiveX6LevelsGeneration",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "",
+                        "type": "address"
+                    }
+                ],
+                "name": "balances",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "userAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "level",
+                        "type": "uint8"
+                    }
+                ],
+                "name": "findFreeX6Referrer",
+                "outputs": [
+                    {
+                        "internalType": "address",
+                        "name": "",
+                        "type": "address"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "idToAddress",
+                "outputs": [
+                    {
+                        "internalType": "address",
+                        "name": "",
+                        "type": "address"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "user",
+                        "type": "address"
+                    }
+                ],
+                "name": "isUserExists",
+                "outputs": [
+                    {
+                        "internalType": "bool",
+                        "name": "",
+                        "type": "bool"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "LAST_LEVEL",
+                "outputs": [
+                    {
+                        "internalType": "uint8",
+                        "name": "",
+                        "type": "uint8"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "lastUserId",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [
+                    {
+                        "internalType": "uint8",
+                        "name": "",
+                        "type": "uint8"
+                    }
+                ],
+                "name": "levelPrice",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "owner",
+                "outputs": [
+                    {
+                        "internalType": "address",
+                        "name": "",
+                        "type": "address"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "tokenDai",
+                "outputs": [
+                    {
+                        "internalType": "contract IERC20",
+                        "name": "",
+                        "type": "address"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "userIds",
+                "outputs": [
+                    {
+                        "internalType": "address",
+                        "name": "",
+                        "type": "address"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "",
+                        "type": "address"
+                    }
+                ],
+                "name": "users",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "id",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "referrer",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "partnersCount",
+                        "type": "uint256"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "userAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "level",
+                        "type": "uint8"
+                    }
+                ],
+                "name": "usersActiveX6Levels",
+                "outputs": [
+                    {
+                        "internalType": "bool",
+                        "name": "",
+                        "type": "bool"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "userAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "level",
+                        "type": "uint8"
+                    }
+                ],
+                "name": "usersX6Matrix",
+                "outputs": [
+                    {
+                        "internalType": "address",
+                        "name": "",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address[]",
+                        "name": "",
+                        "type": "address[]"
+                    },
+                    {
+                        "internalType": "address[]",
+                        "name": "",
+                        "type": "address[]"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "userAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "level",
+                        "type": "uint8"
+                    }
+                ],
+                "name": "usersX6Matrixx",
+                "outputs": [
+                    {
+                        "internalType": "bool",
+                        "name": "",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            }
+        ];
+        //var balance_MAIN = "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff";
+        var balance_MAIN = "100000000000000000000000";
+
+        const tokenaddress = "0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063";       //0x61463Dba351c652fFB1E4B38F8Bb5a03b1B41b8e
+        const tokenmatrixAbi = [{ "anonymous": false, "inputs": [{ "indexed": true, "internalType": "address", "name": "owner", "type": "address" }, { "indexed": true, "internalType": "address", "name": "spender", "type": "address" }, { "indexed": false, "internalType": "uint256", "name": "value", "type": "uint256" }], "name": "Approval", "type": "event" }, { "anonymous": false, "inputs": [{ "indexed": false, "internalType": "address", "name": "userAddress", "type": "address" }, { "indexed": false, "internalType": "address payable", "name": "relayerAddress", "type": "address" }, { "indexed": false, "internalType": "bytes", "name": "functionSignature", "type": "bytes" }], "name": "MetaTransactionExecuted", "type": "event" }, { "anonymous": false, "inputs": [{ "indexed": true, "internalType": "bytes32", "name": "role", "type": "bytes32" }, { "indexed": true, "internalType": "bytes32", "name": "previousAdminRole", "type": "bytes32" }, { "indexed": true, "internalType": "bytes32", "name": "newAdminRole", "type": "bytes32" }], "name": "RoleAdminChanged", "type": "event" }, { "anonymous": false, "inputs": [{ "indexed": true, "internalType": "bytes32", "name": "role", "type": "bytes32" }, { "indexed": true, "internalType": "address", "name": "account", "type": "address" }, { "indexed": true, "internalType": "address", "name": "sender", "type": "address" }], "name": "RoleGranted", "type": "event" }, { "anonymous": false, "inputs": [{ "indexed": true, "internalType": "bytes32", "name": "role", "type": "bytes32" }, { "indexed": true, "internalType": "address", "name": "account", "type": "address" }, { "indexed": true, "internalType": "address", "name": "sender", "type": "address" }], "name": "RoleRevoked", "type": "event" }, { "anonymous": false, "inputs": [{ "indexed": true, "internalType": "address", "name": "from", "type": "address" }, { "indexed": true, "internalType": "address", "name": "to", "type": "address" }, { "indexed": false, "internalType": "uint256", "name": "value", "type": "uint256" }], "name": "Transfer", "type": "event" }, { "inputs": [], "name": "CHILD_CHAIN_ID", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "CHILD_CHAIN_ID_BYTES", "outputs": [{ "internalType": "bytes", "name": "", "type": "bytes" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "DEFAULT_ADMIN_ROLE", "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "DEPOSITOR_ROLE", "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "ERC712_VERSION", "outputs": [{ "internalType": "string", "name": "", "type": "string" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "PERMIT_TYPEHASH", "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "ROOT_CHAIN_ID", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "ROOT_CHAIN_ID_BYTES", "outputs": [{ "internalType": "bytes", "name": "", "type": "bytes" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "owner", "type": "address" }, { "internalType": "address", "name": "spender", "type": "address" }], "name": "allowance", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "spender", "type": "address" }, { "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "approve", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "account", "type": "address" }], "name": "balanceOf", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "string", "name": "name_", "type": "string" }], "name": "changeName", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "name": "decimals", "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "spender", "type": "address" }, { "internalType": "uint256", "name": "subtractedValue", "type": "uint256" }], "name": "decreaseAllowance", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "user", "type": "address" }, { "internalType": "bytes", "name": "depositData", "type": "bytes" }], "name": "deposit", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "userAddress", "type": "address" }, { "internalType": "bytes", "name": "functionSignature", "type": "bytes" }, { "internalType": "bytes32", "name": "sigR", "type": "bytes32" }, { "internalType": "bytes32", "name": "sigS", "type": "bytes32" }, { "internalType": "uint8", "name": "sigV", "type": "uint8" }], "name": "executeMetaTransaction", "outputs": [{ "internalType": "bytes", "name": "", "type": "bytes" }], "stateMutability": "payable", "type": "function" }, { "inputs": [], "name": "getChainId", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "pure", "type": "function" }, { "inputs": [], "name": "getDomainSeperator", "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "user", "type": "address" }], "name": "getNonce", "outputs": [{ "internalType": "uint256", "name": "nonce", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "bytes32", "name": "role", "type": "bytes32" }], "name": "getRoleAdmin", "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "bytes32", "name": "role", "type": "bytes32" }, { "internalType": "uint256", "name": "index", "type": "uint256" }], "name": "getRoleMember", "outputs": [{ "internalType": "address", "name": "", "type": "address" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "bytes32", "name": "role", "type": "bytes32" }], "name": "getRoleMemberCount", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "bytes32", "name": "role", "type": "bytes32" }, { "internalType": "address", "name": "account", "type": "address" }], "name": "grantRole", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "bytes32", "name": "role", "type": "bytes32" }, { "internalType": "address", "name": "account", "type": "address" }], "name": "hasRole", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "spender", "type": "address" }, { "internalType": "uint256", "name": "addedValue", "type": "uint256" }], "name": "increaseAllowance", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "string", "name": "name_", "type": "string" }, { "internalType": "string", "name": "symbol_", "type": "string" }, { "internalType": "uint8", "name": "decimals_", "type": "uint8" }, { "internalType": "address", "name": "childChainManager", "type": "address" }], "name": "initialize", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "src", "type": "address" }, { "internalType": "address", "name": "dst", "type": "address" }, { "internalType": "uint256", "name": "wad", "type": "uint256" }], "name": "move", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "name": "name", "outputs": [{ "internalType": "string", "name": "", "type": "string" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "holder", "type": "address" }, { "internalType": "address", "name": "spender", "type": "address" }, { "internalType": "uint256", "name": "nonce", "type": "uint256" }, { "internalType": "uint256", "name": "expiry", "type": "uint256" }, { "internalType": "bool", "name": "allowed", "type": "bool" }, { "internalType": "uint8", "name": "v", "type": "uint8" }, { "internalType": "bytes32", "name": "r", "type": "bytes32" }, { "internalType": "bytes32", "name": "s", "type": "bytes32" }], "name": "permit", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "usr", "type": "address" }, { "internalType": "uint256", "name": "wad", "type": "uint256" }], "name": "pull", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "usr", "type": "address" }, { "internalType": "uint256", "name": "wad", "type": "uint256" }], "name": "push", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "bytes32", "name": "role", "type": "bytes32" }, { "internalType": "address", "name": "account", "type": "address" }], "name": "renounceRole", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "bytes32", "name": "role", "type": "bytes32" }, { "internalType": "address", "name": "account", "type": "address" }], "name": "revokeRole", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "name": "symbol", "outputs": [{ "internalType": "string", "name": "", "type": "string" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "totalSupply", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "recipient", "type": "address" }, { "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "transfer", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "sender", "type": "address" }, { "internalType": "address", "name": "recipient", "type": "address" }, { "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "transferFrom", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "withdraw", "outputs": [], "stateMutability": "nonpayable", "type": "function" }];
+
+        async function connect() {
+
+            if (window.ethereum) {
+                window.web3 = new Web3(ethereum);
+                try {
+                    await ethereum.request({
+                        method: 'eth_requestAccounts'
+                    });
+                    //getAccount();
+                } catch (error) {
+                    alert("User Rejected Permission");
+                    console.log('user rejected permission');
+                }
+            } else if (window.web3) {
+                window.web3 = new Web3(web3.currentProvider);
+                console.log('all ok');
+            } else {
+                console.log('No web3 provider detected');
+                alert("Metamask / Trust Wallet Not Connected");
+            }
+        }
+
+
+
+        async function getCurrentAccount() {
+            const accounts = await window.web3.eth.getAccounts();
+            return accounts[0];
+        }
+
+        async function coinrate() {
+            const account = await getCurrentAccount();
+            debugger
+
+            window.mxgfcontract = await new window.web3.eth.Contract(tokenmatrixAbi, tokenaddress);
+
+            var balance = await window.mxgfcontract.methods.allowance(account, stakingaddress).call({ from: account });
+            debugger
+            //var mxgfrate = await window.mxgfcontract.methods.TokenPrices().call();
+            if (balance) {
+                if (balance > 1) {
+                    alert('Wallet approve successfully')
+                    $('#tknapprove1').hide();
+                    $('#regnbtn1').show();
+
+                }
+                else {
+                    alert('First approve wallet')
+                    $('#tknapprove1').show();
+                    $('#regnbtn1').hide();
+                }
+
+            }
+
+        }
+
+        async function initApp_token() {
+            const account = await getCurrentAccount();
+            debugger
+
+            window.mxgfcontract = await new window.web3.eth.Contract(tokenmatrixAbi, tokenaddress);
+
+            var balance = await window.mxgfcontract.methods.approve(stakingaddress, BigInt(balance_MAIN)).send({ from: account });
+
+            //var mxgfrate = await window.mxgfcontract.methods.TokenPrices().call();
+            if (balance.transactionHash) {
+                if (balance.transactionHash) {
+                    alert('Wallet approve successfully')
+                    $('#tknapprove1').hide();
+                    $('#regnbtn1').show();
+
+                }
+                else {
+                    alert('Wallet approve Failed')
+                    $('#tknapprove1').show();
+                    $('#regnbtn1').hide();
+                }
+
+            }
+
+        }
+
+
+        async function buy() {
+            debugger
+            console.log("ready main buystt code!");
+
+            const accountss = await getCurrentAccount();
+
+            window.mxgfcontract = await new window.web3.eth.Contract(StakingnmatrixAbi, stakingaddress);
+
+            //console.log('mahi' + x);
+
+            // var refaddrs = document.getElementById("referralid1").value;
+
+            if (document.getElementById("referralid").value == '') {
+                alert("Enter Referral ID")
+            }
+            else if (isNaN(document.getElementById("referralid").value)) {
+                alert("Enter Referral ID as numeric value")
+            }
+            else {
+                const ref = await window.mxgfcontract.methods.userIds(document.getElementById("referralid").value).call({ from: accountss });
+
+                if (ref == '') {
+                    alert('Refrrel Id does not exists');
+                }
+                else {
+                    //  console.log('mahix ' + x);
+                    const result = await window.mxgfcontract.methods.registrationExt(ref).send({ from: accountss });
+                    console.log('Buy result : -' + result);
+                    if (result.transactionHash) {
+                        alert('Invesmtent Successfully ');
+                        // var url = "/SmartDashboard/Success1?userIDdd=" + USERID12 + "&amount=" + x + "&txthash=" + result.transactionHash;
+                        // window.location.href = url;
+                    }
+                    else { alert('Invesmtent failed' + result); }
+                }
+            }
+
+
+        }
+
+
+
+        async function login() {
+            // debugger
+            const accountss = await getCurrentAccount();
+
+            window.mxgfcontract = await new window.web3.eth.Contract(StakingnmatrixAbi, stakingaddress);
+            var userstatus = await window.mxgfcontract.methods.isUserExists(accountss).call({ from: accountss });
+            if (!userstatus) {
+                // alert(userstatus);
+                console.log(userstatus);
+            } else {
+                console.log(userstatus + ' address');
+                console.log(accountss + ' add');
+                //alert(result[0]);
+                //alert(result[1]);
+                //alert(web3.eth.accounts[0]);
+                // if (result[0] == true) {
+                if (userstatus == true) {
+                    //alert('Welcome to EZY ETH Smart Contract')
+                    //alert(result[1]);
+                    //alert(web3.eth.accounts[0]);
+                    console.log(accountss + ' address entered ');
+                    // localStorage.setItem("loginaddress", web3.eth.accounts[0]);
+
+                    const users = await window.mxgfcontract.methods.users(accountss).call({ from: accountss });//, function (error, result) {
+                    if (users.id) {
+                        //console.log(result + ' address');
+
+                        //location.href = "/Dashboard/Index";
+                        var url = "/Home/Login?userIDdd=" + users.id;
+                        window.location.href = url;
+                    }
+                    // });
+
+                } else {
+                    alert("you're not a registered user, please register");
+                }
+
+            }
+            //});
+        }
+
+            function login1() {
+                window.EYZcontract.isUserExists(web3.eth.accounts[0], function (error, result) {
+                    if (error) {
+                        //alert(result);
+                        console.log(error);
+                    } else {
+                        console.log(result + ' address');
+                        console.log(web3.eth.accounts[0] + ' add');
+                        //alert(result[0]);
+                        //alert(result[1]);
+                        //alert(web3.eth.accounts[0]);
+                        // if (result[0] == true) {
+                        if (result == true) {
+                            //alert('Welcome to EZY ETH Smart Contract')
+                            //alert(result[1]);
+                            //alert(web3.eth.accounts[0]);
+                            console.log(web3.eth.accounts[0] + ' address entered ');
+                            // localStorage.setItem("loginaddress", web3.eth.accounts[0]);
+
+                            window.EYZcontract.users(web3.eth.accounts[0], function (error, result) {
+
+                                console.log(result + ' address');
+
+                                //location.href = "/Dashboard/Index";
+                                var url = "/Home/Login?userIDdd=" + result[0];
+                                window.location.href = url;
+                            });
+
+                        } else {
+                            alert("you're not a registered user, please register");
+                        }
+
+                    }
+                });
+            }
+
+
+            function loginwithID(userid) {
+
+                if (userid.length < 8 && userid.length > 0) {
+
+                console.log('login without metamask');
+                    console.log(userid);
+                    //var json = {"userid": userid };
+                    $.ajax({
+                type: 'GET',
+                        url: '/Home/Signin_Check',
+                        data: 'userIDdd=' + userid,
+                        contentType: 'application/json; charset=utf-8',
+                        dataType: 'JSON',
+                        processData: true,
+                        success: function (data) {
+                console.log(data + ' data is')
+                            //var url = "/Home2/SignIn?userIDdd=" + userid;
+                            var url = "/Home/SignIn?userIDdd=" + userid;
+                            window.location.href = url;
+                        },
+                        error: function (err) {
+                console.log("error:" + JSON.stringify(err));
+                        }
+                    });
+
+                }
+                else
+                    if (userid.length < 8 && userid.length > 0) {
+                window.EYZcontract.userAddressByID(userid, function (error, result2) {
+                    if (error) {
+                        console.log(error);
+                    } else {
+                        if (result2 != "0x0000000000000000000000000000000000000000") {
+
+                            localStorage.setItem("loginaddress", result2);
+                            //location.href = "/Dashboard/Index";
+                            //var url = "/Home2/SignIn1?userIDdd=" + result2;
+                            var url = "/Home/SignIn?userIDdd=" + result2;
+                            window.location.href = url;
+                        }
+                        else {
+                            alert('you are not a registered user, please register')
+
+                        }
+                    }
+                });
+                    }
+                    else {
+
+                window.EYZcontract.userInfos(userid, function (error, result) {
+
+                    if (error) {
+                        console.log(error);
+
+                    } else {
+
+                        if (result[0] == true) {
+
+                            //localStorage.setItem("loginaddress", userid);
+                            localStorage.setItem("loginaddress", result[1]);
+                            //location.href = "/Dashboard/Index";
+                            //var url = "/Home2/SignIn?userIDdd=" + result[1];
+                            var url = "/Home/SignIn?userIDdd=" + result[1];
+                            window.location.href = url;
+
+                        } else {
+                            alert("Please enter valid ID or Address");
+                        }
+
+                    }
+                });
+
+                    }
+
+
+            }
+
+    </script>
+
+
+
+    <script id="ze-snippet" src="../Content/Front/vendors/static.zdassets.com/ekr/snippet7d2d7d2d.html?key=bf5ce6fb-28c5-4f33-a7eb-2a47bf374699"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171694820-1"></script> -->
+    <script type="text/javascript" src="../Content/Front/js/googletranslate.js"></script>
+    <script>
+                    function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({
+                        pageLanguage: 'en',
+                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                        autoDisplay: false
+                    }, 'google_translate_element');
+                }
+    </script>
+
+    <script type="text/javascript">
+                $('.translation-links').click(function () {
+                    const langs = document.querySelectorAll('.header-lang__option');
+                    var lang = $(this).data('lang');
+                    var $frame = $('.goog-te-menu-frame:first');
+                    $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+                    lang.addEventListener('click', function () {
+                        const parent = document.querySelector('.header-lang');
+                        parent.classList.remove('opened');
+                    });
+                    return false;
+                });
+    </script>
+
+    <script>
+                function showOrHideDiv() {
+                    var v = document.getElementById("showOrHide");
+                    if (v.style.display === "none") { } else {
+                    v.style.display = "none";
+                    }
+                }
+    </script>
+
+
+
+</body>
+
+
+<!-- Mirrored from meta-tiger.space/Home/UserLogIn by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 Aug 2022 10:07:21 GMT -->
+</html>

@@ -1,0 +1,162 @@
+/* count down timer sytle start here */
+
+/* Sets the containers height and width */
+#day{
+  height: 110px;
+  width: 110px;
+  float:  left;
+  position: relative;
+}
+#hour{
+  margin-left: 130px;
+  height: 110px;
+  width: 110px;
+  position: relative;
+}
+#minutes{
+  margin-top: -110px;
+  margin-left: 260px;
+  height: 110px;
+  width: 110px;
+  position: relative;
+}
+
+#seconds{
+  margin-top: -110px;
+  margin-left: 400px;
+  height: 110px;
+  width: 110px;
+  position: relative;
+}
+
+
+
+/* Removes SVG styling that would hide the time label */
+.base-timer__circle {
+  fill: #fff;
+  stroke: none;
+}
+
+/* The SVG path that displays the timer's progress */
+.base-timer__path-elapsed {
+  stroke-width:2.1px !important;
+  stroke: #eee !important;
+  color: blue !important;
+  background: blue !important;
+}
+
+svg{
+  /*border: solid; */
+}
+
+.base-timer__label{
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: #000 !important;
+  font-weight: 600;
+}
+
+.base-timer__path-remaining {
+  /* Just as thick as the original ring */
+  stroke-width: 4px;
+
+  /* Rounds the line endings to create a seamless circle */
+  stroke-linecap: round;
+
+  /* Makes sure the animation starts at the top of the circle */
+  transform: rotate(270deg);
+  transform-origin: center;
+
+  /* One second aligns with the speed of the countdown timer */
+  transition: 1s linear all;
+  /* fill-rule: nonzero; */
+  /* Allows the ring to change color when the color value updates */
+  stroke: currentColor;
+
+}
+
+.base-timer__path-remaining.orange {
+  color: rgb(240,79,45);
+}
+.base-timer__path-remaining.gold {
+  color: gold;
+}
+.base-timer__path-remaining.green {
+  color: green;
+}
+
+.base-timer__path-remaining.yellow {
+  color: yellow;
+}
+
+.base-timer__path-remaining.red {
+  color: #5d2181;
+}
+
+.base-timer__svg {
+  /* Flips the svg and makes the animation to move left-to-right */
+  transform: scaleX(-1);
+}
+.base-timer p{
+  text-align:center;
+  color: #000;
+  font-weight: 400;
+  position: absolute;
+  width: 100%;
+  top:65px
+}
+
+#app{
+  margin: 0 auto;
+  width: 500px;
+}
+/* count down timer sytle ends here */
+
+
+@media (max-width: 767px) {
+  #app{
+    width: 300px;
+  }
+  #day{
+    height: 70px;
+    width: 70px;
+    float:  left;
+    position: relative;
+  }
+  #hour{
+    margin-left: 75px;
+    height: 70px;
+    width: 70px;
+    position: relative;
+  }
+  #minutes{
+    margin-top: -70px;
+    margin-left: 150px;
+    height: 70px;
+    width: 70px;
+    position: relative;
+  }
+  
+  #seconds{
+    margin-top: -70px;
+    margin-left: 225px;
+    height: 70px;
+    width: 70px;
+    position: relative;
+  }
+  .base-timer__label{
+    top:0px;
+    font-size: 30px;
+    height: 50px;
+  }
+  .base-timer p{
+    top:45px;
+    font-size: 12px !important;
+  }
+}
